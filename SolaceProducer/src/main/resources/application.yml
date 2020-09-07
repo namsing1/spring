@@ -1,0 +1,68 @@
+spring:
+   main:
+    allow-bean-definition-overriding: true
+   application:
+      name: solaceproducer
+   
+jms:
+    providerUrl: t3://127.0.0.1:7101
+    connectionType:   mycf2
+    destinationName: jms/isom/queue1
+    destinationName1: jms/isom/queueap
+    errorDestinationName: jms/isom/errorqueue
+    concurrentConsumers: 4
+    
+onpremsolace:
+    host: 10.230.231.124:25555
+    vpn:   default
+    clientusername: s-isomapp-u-ptpseelm
+    clientpassword: ENC(cLEDNLQHnbmSG0Wk4BjukDvCmHY7bA0L)
+    
+jasypt:  encryptor:    password: KeyForSolacePassword
+
+
+---
+spring:
+   profiles: ctef1
+   application:
+      name: solaceproducer
+jms:
+    providerUrl: t3://CFSEELM-LX4530.ikeadt.com:7003
+    connectionType:   AGENT_QCF
+    destinationName: SOM_OUT_PUBLISH_SHPMT_FOR_EVENT_MESH_QUEUE
+    errorDestinationName: SOM_OUT_PUBLISH_SHPMT_FOR_EVENT_MESH_ERRORQUEUE
+    concurrentConsumers: 10
+    
+onpremsolace:
+    host: 10.230.231.124:25555
+    vpn:   default
+    clientusername: s-isomapp-u-ptpseelm
+    clientpassword: ateRch84
+
+jasypt:
+  encryptor:
+    password: KeyForSolacePassword
+
+---
+
+spring: 
+   profiles: prod
+   application:
+      name: solaceproducer
+   
+jms:
+    providerUrl: t3://ITEUSOMJMS.ikea.com:7003
+    connectionType:   AGENT_QCF
+    destinationName: SOM_OUT_PUBLISH_SHPMT_FOR_EVENT_MESH_QUEUE
+    errorDestinationName: SOM_OUT_PUBLISH_SHPMT_FOR_EVENT_MESH_ERRORQUEUE
+    concurrentConsumers: 10
+    
+onpremsolace:
+    host: 10.230.231.124:25555
+    vpn:   default
+    clientusername: isom-service-account
+    clientpassword: isom-service-account
+
+jasypt:
+  encryptor:
+    password: KeyForSolacePassword
