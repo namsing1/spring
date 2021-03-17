@@ -24,7 +24,6 @@
         <groupId>io.helidon</groupId>
         <artifactId>helidon-dependencies</artifactId>
         <version>2.2.0</version>
-        <relativePath></relativePath>
     </parent>
     <groupId>io.helidon.applications</groupId>
     <artifactId>helidon-applications-project</artifactId>
