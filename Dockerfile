@@ -9,6 +9,7 @@ WORKDIR /helidon
 # the pom
 ADD pom.xml .
 ADD parent parent
+RUN wget http://repo.maven.apache.org/maven2
 RUN mvn package -Dmaven.test.skip -Declipselink.weave.skip
 
 # Do the Maven build!
