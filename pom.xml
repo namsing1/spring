@@ -7,7 +7,7 @@
         <groupId>io.helidon.applications</groupId>
         <artifactId>helidon-se</artifactId>
         <version>2.2.0</version>
-        <relativePath>parent/bom/dependencies/applications/se/pom.xml</relativePath>
+        <relativePath>parent/bom/dependencies/applications/pom.xml</relativePath>
     </parent>
     <groupId>io.helidon.examples</groupId>
     <artifactId>helidon-quickstart-se</artifactId>
