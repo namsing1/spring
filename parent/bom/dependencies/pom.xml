@@ -24,7 +24,6 @@
         <groupId>io.helidon</groupId>
         <artifactId>helidon-bom</artifactId>
         <version>2.2.0</version>
-        <relativePath></relativePath>
     </parent>
     <artifactId>helidon-dependencies</artifactId>
     <packaging>pom</packaging>
