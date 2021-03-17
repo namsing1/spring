@@ -9,9 +9,8 @@ WORKDIR /helidon
 # the pom
 ADD pom.xml .
 ADD parent parent
-RUN apt-get install wget 
-RUN wget http://repo.maven.apache.org/maven2
-RUN mvn package -Dmaven.test.skip -Declipselink.weave.skip
+
+//RUN mvn package -Dmaven.test.skip -Declipselink.weave.skip
 
 # Do the Maven build!
 # Incremental docker builds will resume here when you change sources
